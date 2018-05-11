@@ -1,8 +1,11 @@
-# recorded-calls-node
+# recorded-calls-php
 Access RingCentral Call Recordings Demo
 
 ## Clone the project
-* git clone https://github.com/pacovu/recorded-calls-node
+```git clone https://github.com/pacovu/recorded-calls-php```
 
-## Install dependencies
-* npm install --save
+## Install RingCentral SDK for PHP and Dependencies
+```
+curl -sS https://getcomposer.org/installer | php
+php composer.phar require ringcentral/ringcentral-php
+```
