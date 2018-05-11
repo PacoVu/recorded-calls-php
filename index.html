@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Call Logs Visualization Demo</title>
+    <script src="public/js/main.js?v=0.002" type="text/javascript"></script>
+    <script src="public/js/jquery-3.1.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand"><b>Call Recordings</b> ANALYSIS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Read</a></li>
+        <li><a href="recordedcalls.php">List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.ringcentral.com" target="_blank">Powered by&nbsp;<img alt="Brand" src="public/img/ringcentral.png" height="20"></a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id='content'>
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="fromDate">From Date</label>
+          <input type="text" id="fromdatepicker"></input>&nbsp;&nbsp;
+        <label for="toDate">To Date</label>
+          <input type="text" id="todatepicker"></input>&nbsp;
+        <label for="recordingType">Recording Type</label>
+          <select name="recordingType" id="recordingType" style="display:inline">
+              <option value="All" selected>All</option>
+              <option value="Automatic">Automatic</option>
+              <option value="OnDemand">OnDemand</option>
+          </select>&nbsp;&nbsp;
+
+        <button type="button" class="btn-call" onclick="readCallLogs()" style="display:inline">Call Logs</button>
+        &nbsp;&nbsp;
+        <label for="access_level">Access level</label>
+        <select name="access_level" id="access_level" style="display:inline">
+          <option value="account" selected>Account</option>
+          <option value="user">Extension</option>
+        </select>
+      </div>
+    </form>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+          <table>
+            <tr id="records_list"></tr>
+          </table>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
