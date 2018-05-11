@@ -9,3 +9,8 @@ Access RingCentral Call Recordings Demo
 curl -sS https://getcomposer.org/installer | php
 php composer.phar require ringcentral/ringcentral-php
 ```
+
+## Change environment
+
+* Rename dotenv to .env
+* Provide your own app and login credentials
